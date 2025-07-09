@@ -26,7 +26,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     # Path to the JSON file
-    json_path = "/root/ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/config/MID360_config.json"
+    json_path = "/root/ros2_ws/src/install/livox_ros_driver2/share/livox_ros_driver2/config/MID360_config.json"
 
     # Update JSON fields
     update_json_fields(json_path, args.t_ip, args.l_ip)
