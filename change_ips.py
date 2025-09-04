@@ -20,14 +20,16 @@ def update_json_fields(path, t_ip, l_ip):
 
 if __name__ == "__main__":
     # Use argparse for argument parsing
+    
+    # Path to the JSON file
+    json_path = "/root/ros2_ws/src/install/livox_ros_driver2/share/livox_ros_driver2/config/MID360_config.json"
+    
     parser = argparse.ArgumentParser(description="Update IP addresses in a JSON configuration file.")
+    parser.add_argument("--j_path", required=True, default=json_path, help="JSON Path for MID360")
     parser.add_argument("--t_ip", required=True, help="Target IP address")
     parser.add_argument("--l_ip", required=True, help="Lidar IP address")
     args = parser.parse_args()
 
-    # Path to the JSON file
-    json_path = "/root/ros2_ws/src/install/livox_ros_driver2/share/livox_ros_driver2/config/MID360_config.json"
-
     # Update JSON fields
-    update_json_fields(json_path, args.t_ip, args.l_ip)
-    print(f"Updated JSON file at {json_path} with t_ip={args.t_ip} and l_ip={args.l_ip}")
+    update_json_fields(args.j_path, args.t_ip, args.l_ip)
+    print(f"Updated JSON file at {args.j_path} with t_ip={args.t_ip} and l_ip={args.l_ip}")
