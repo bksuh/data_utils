@@ -26,8 +26,8 @@ if __name__ == "__main__":
     
     parser = argparse.ArgumentParser(description="Update IP addresses in a JSON configuration file.")
     parser.add_argument("--j_path", required=True, default=json_path, help="JSON Path")
-    parser.add_argument("--t_ip", required=True, help="Target IP address")
-    parser.add_argument("--l_ip", required=True, help="Lidar IP address")
+    parser.add_argument("--t_ip", required=True, default ="192.168.1.5", help="Target IP address")
+    parser.add_argument("--l_ip", required=True, default ="192.168.1.100", help="Lidar IP address")
     args = parser.parse_args()
 
     # Update JSON fields
