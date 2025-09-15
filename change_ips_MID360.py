@@ -22,7 +22,7 @@ if __name__ == "__main__":
     # Use argparse for argument parsing
     
     # Path to the JSON file
-    json_path = "/root/ros2_ws/src/install/livox_ros_driver2/share/livox_ros_driver2/config/MID360_config.json"
+    json_path = "/root/ros2_ws/src/livox_ros_driver2/config/MID360_config.json"
     
     parser = argparse.ArgumentParser(description="Update IP addresses in a JSON configuration file.")
     parser.add_argument("--j_path", required=True, default=json_path, help="JSON Path for MID360")
